@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Gotham Pro';
   background-color: #F4F8FB;
 }
 
@@ -15,6 +15,7 @@ body {
   align-items: center;
   background-color: #F4F8FB;
   padding: 26px 80px;
+  z-index: 1000;
 }
 
 .nav-links {
