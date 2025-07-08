@@ -759,7 +759,7 @@
 /*NEWSLETTER*/
 .newsletter-section {
   background-color: #f4f8fc;
-  padding: 64px;
+  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
 }
@@ -767,7 +767,7 @@
 .newsletter-box {
   background-color: #f2994a;
   border-radius: 16px;
-  padding: 3rem 2rem;
+  padding: 64px;
   text-align: center;
   max-width: 1272px;
   width: 100%;
@@ -838,64 +838,378 @@
   text-decoration: underline;
 }
 
+/* TABLET RESPONSIVE STYLES (768px - 1024px) */
+@media (max-width: 1024px) {
+  /* Global adjustments */
+  .navbar {
+    padding: 20px 40px;
+  }
+  
+  /* Hero section */
+  .hero-title {
+    font-size: 60px;
+  }
+  
+  .hero-description {
+    font-size: 15px;
+  }
+  
+  /* Orange card section */
+  .orange-card {
+    padding: 40px;
+    margin: 2rem;
+  }
+  
+  .card-title {
+    width: 100%;
+    font-size: 36px;
+    line-height: 1.3;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  .card-columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .card-column {
+    width: 560px;
+  }
+  
+  .card-column p {
+    width: 100%;
+  }
+  
+  .card-bg-image {
+    width: 500px;
+    bottom: -100px;
+    right: -160px;
+  }
+  
+  /* Mission vision section */
+  .mv-title {
+    width: 600px;
+    text-align: center;
+    margin: 16px auto;
+  }
+  
+  .mv-card {
+    padding: 40px;
+  }
+  
+  /* Program section */
+  .program-overview {
+    padding: 40px;
+    flex-direction: column;
+    margin: 2rem;
+  }
+  
+  .program-left {
+    width: 100%;
+  }
+  
+  .pillar-stack {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  /* Why join section */
+  .why-join {
+    margin: 6rem 2rem;
+  }
+  .why-benefits {
+    gap: 30px;
+  }
+  
+  .why-benefit {
+    flex: 1 1 45%;
+    max-width: none;
+  }
+  
+  /* Application section */
+  .application-section{
+    margin: 6rem 2rem;
+    padding: 0;
+  }
 
-/*FOOTER*/
-.site-footer {
-  background: #0a2237;
-  padding: 2rem 4rem;
-  color: #fff;
-  font-family: 'Gotham Pro', sans-serif;
+  .heading-block {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .heading-block h2{
+    max-width: none;
+  }
+
+  .checklist h3{
+    max-width: 600px;
+  }
+  
+  .text-left {
+    max-width: 100%;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .bottom-section{
+    gap: 48px;
+  }
+  
+  /* Join us cards */
+  .join-us{
+    padding: 0rem 2rem;
+  }
+
+  .js-cards {
+    gap: 24px;
+  }
+  
+  .js-card {
+    flex: 1 1 45%;
+  }
+  
+  /* Newsletter */
+  .newsletter-subtext {
+    width: 100%;
+    font-size: 18px;
+  }
 }
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
+/* Adjustments for smaller tablets (768px) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 30px;
+  }
+  
+  .card-bg-image {
+    width: 300px;
+    bottom: -100px;
+  }
+  
+  .why-benefit {
+    flex: 1 1 100%;
+  }
+  
+  .js-card {
+    flex: 1 1 100%;
+  }
+  
+  .newsletter-heading {
+    font-size: 32px;
+  }
+  
+  .newsletter-subtext {
+    font-size: 16px;
+  }
 }
 
-.footer-logo {
-  width: 100px;
-  height: auto;
-}
 
-.footer-btn {
-  display: inline-block;
-  background: #f2994a;
-  color: #fff;
-  padding: 12px 20px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
+@media (max-width: 767px) {
+  /* Hero section */
+  .hero {
+    padding: 2rem 1rem;
+  }
 
-.footer-btn:hover {
-  background: #d97706;
-}
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
 
-.footer-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  .hero-tagline {
+    font-size: 24px;
+  }
 
-.footer-socials {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
+  .hero-description {
+    font-size: 14px;
+  }
 
-.footer-socials img {
-  width: 24px;
-  height: 24px;
-}
+  /* Orange card section */
+  .orange-card {
+    padding: 24px;
+    margin: 1rem;
+  }
 
-.footer-copy {
-  font-size: 14px;
-  font-weight: 600;
-  color: #4F6289;
+  .card-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .card-column {
+    width: 100%;
+  }
+
+  .card-column h5 {
+    font-size: 24px;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-bg-image {
+    display: none;
+  }
+
+  /* Mission vision section */
+  .mission-vision {
+    padding: 2rem;
+  }
+
+  .mv-title {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .mv-card {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .mv-card p {
+    width: 100%;
+  }
+
+  .mv-cards{
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .pillar-card{
+    padding: 2px 24px;
+    width: none;
+  }
+
+  .pillar-text h3{
+    font-size: 24px;
+  }
+
+  .pillar-card.oranges{
+    background: #f2994a;
+    z-index: 1;
+    width: 270px;
+    height: 75px;
+  }
+
+  .pillar-card.blacks{
+    background: #000;
+    z-index: 2;
+    width: 290px;
+    height: 80px;
+  }
+  
+  .pillar-card.blues {
+    background: #1D92FF;
+    z-index: 3;
+    width: 320px;
+    height: 92px;
+
+  }
+
+  /* Program section */
+  .program-overview {
+    padding: 24px;
+    margin: 1rem;
+    border-radius: 16px;
+    gap: 0px;
+  }
+
+  .program-header h2 {
+    font-size: 24px;
+  }
+
+  .program-left{
+    gap: 20px;
+  }
+
+  /* Why join section */
+  .why-join {
+    margin: 3rem 1rem;
+  }
+
+  .why-title {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .why-benefits {
+    gap: 16px;
+  }
+
+  .heading-block h2{
+    font-size: 24px;
+  }
+
+  /* Application section */
+  .application-section {
+    padding: 0;
+    margin: 5   rem 1rem;
+  }
+
+  .container {
+    gap: 32px;
+  }
+
+  .checklist h3{
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checklist {
+    flex: 1 1 100%;
+  }
+
+  /* Join us section */
+  .js-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .js-description{
+    margin-bottom: 20px;
+  }
+
+  /* Newsletter */
+  .newsletter-box {
+    padding: 32px 24px;
+  }
+
+  .newsletter-heading {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .newsletter-subtext {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+  }
 }
