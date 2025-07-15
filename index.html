@@ -17,6 +17,7 @@
 
         <link rel="stylesheet" href="/styles/global.css">
         <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/pt-modal.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -263,7 +264,7 @@
                         <p>
                         By sponsoring us, you'll invest in a more inclusive tech future, providing participants with hands-on experience and mentorship. Your sponsorship not only nurtures emerging leaders but also enhances your brand's commitment to social responsibility.
                         </p>
-                        <a href="#" class="js-link">Sponsor Us Today</a>
+                        <a href="#" id="openSponsorModal" class="js-link">Sponsor Us Today</a>
                     </div>
 
                     <div class="js-card oranges">
@@ -272,7 +273,7 @@
                         <p>
                         We collaborate with tech schools, communities, universities, and organisations that equip participants with essential skills. Together, we can build a strong community of innovators and create a talent pipeline that benefits both your institution and the broader tech landscape.
                         </p>
-                        <a href="#" class="js-link">Partner With Us Today</a>
+                        <a href="#" id="openPartnerModal" class="js-link">Partner With Us</a>
                     </div>
 
                     <div class="js-card navys">
@@ -281,10 +282,107 @@
                         <p>
                         Are you an experienced professional looking to give back? Your guidance can help aspiring developers navigate the open-source landscape and build their skills. If you're interested in mentoring passionate participants, we'd love to connect and discuss how you can make a difference!
                         </p>
-                        <a href="#" class="js-link">Become A Mentor Today</a>
+                        <a href="#" id="openMentorModal" class="js-link">Become A Mentor Today</a>
                     </div>
                 </div>
             </section>
+
+            <!-- Partner Modal -->
+            <div id="partnerModal" class="modal">
+                <div class="modal-content large-modal">
+                    <span class="close" id="closePartnerModal">&times;</span>
+                    <div class="modal-body">
+                    <div class="modal-left">
+                        <p class="modal-subtitle">Let's Collaborate</p>
+                        <h2 class="modal-title">Partner With Us</h2>
+                        <p class="modal-description">
+                        We collaborate with tech schools, communities, universities, and organizations that equip participants with essential skills.
+                        Together, we can build a strong community of innovators and create a talent pipeline that benefits both your institution and the broader tech landscape
+                        </p>
+                    </div>
+                    <form class="modal-form">
+                        <input type="email" placeholder="Enter Your Email" required>
+                        <input type="text" placeholder="Enter Your Firstname" required>
+                        <input type="text" placeholder="Enter Your Lastname" required>
+                        <select required>
+                            <option value="">Select Partnership Type</option>
+                            <option value="development">Software Development</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="product">Product Management</option>
+                            <option value="qa">Quality Assurance</option>
+                        </select>
+                        <textarea placeholder="Any more infromation..."></textarea>
+                        <button type="submit" class="submit-btn">Submit Partnership Request</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sponsor Modal -->
+            <div id="sponsorModal" class="modal">
+                <div class="modal-content large-modal">
+                    <span class="close" id="closeSponsorModal">&times;</span>
+                    <div class="modal-body">
+                    <div class="modal-left">
+                        <p class="modal-subtitle">Make a Difference</p>
+                        <h2 class="modal-title">Sponsor Our Program</h2>
+                        <p class="modal-description">
+                            By sponsoring us, you'll invest in a more inclusive tech future, 
+                            providing participants with hands-on experience and mentorship. 
+                            Your sponsorship not only nurtures emerging leaders but also enhances 
+                            your brand's commitment to social responsibility.
+                        </p>
+                    </div>
+                    <form class="modal-form">
+                        <input type="email" placeholder="Enter Your Email" required>
+                        <input type="text" placeholder="Enter Your Firstname" required>
+                        <input type="text" placeholder="Enter Your Lastname" required>
+                        <select required>
+                            <option value="">Select Sponsorship Type</option>
+                            <option value="development">Software Development</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="product">Product Management</option>
+                            <option value="qa">Quality Assurance</option>
+                        </select>
+                        <textarea placeholder="Any more infromation..."></textarea>
+                        <button type="submit" class="submit-btn">Submit Sponsorship Inquiry</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mentor Modal -->
+            <div id="mentorModal" class="modal">
+                <div class="modal-content large-modal">
+                    <span class="close" id="closeMentorModal">&times;</span>
+                    <div class="modal-body">
+                    <div class="modal-left">
+                        <p class="modal-subtitle">Share Your Knowledge</p>
+                        <h2 class="modal-title">Become a Mentor</h2>
+                        <p class="modal-description">
+                            Are you an experienced professional looking to give back? 
+                            Your guidance can help aspiring developers navigate the open-source landscape and build their skills.
+                            If you're interested in mentoring passionate participants, we'd love to connect and discuss how you can make a difference!
+                        </p>
+                    </div>
+                    <form class="modal-form">
+                        <input type="email" placeholder="Enter Your Email" required>
+                        <input type="text" placeholder="Enter Your Firstname" required>
+                        <input type="text" placeholder="Enter Your Lastname" required>
+                        <select required>
+                            <option value="">Select Tech Stack</option>
+                            <option value="development">Software Development</option>
+                            <option value="design">UI/UX Design</option>
+                            <option value="product">Product Management</option>
+                            <option value="qa">Quality Assurance</option>
+                        </select>
+                        <input type="text" placeholder="LinkedIn Profile" required>
+                        <textarea placeholder="Any more infromation..."></textarea>
+                        <button type="submit" class="submit-btn">Submit Mentor Application</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
 
             <section class="newsletter-section">
                 <div class="newsletter-box">
@@ -326,25 +424,7 @@
             </div>
         </footer>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navLinks = document.querySelector('.nav-links');
-                
-                menuToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                });
-                
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menuToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                });
-                });
-            });
-        </script>
-
-        
+        <script src="/script/mobile-nav.js"></script>
+        <script src="/script/modal.js"></script>
     </body>
 </html>

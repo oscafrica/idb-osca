@@ -756,6 +756,16 @@
   color: #0A2237;
 }
 
+button {
+  background: none;
+  color: none;
+  border: none;
+  align-content: left;
+  align-items: left;
+  justify-content: start;
+
+}
+
 /*NEWSLETTER*/
 .newsletter-section {
   background-color: #f4f8fc;
